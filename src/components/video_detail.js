@@ -31,12 +31,12 @@ class VideoDetail extends React.Component {
   }
   const videoWidth = video['images']
   const videoHeight = video.images
-  const gifUrl = `https://cors-anywhere.herokuapp.com/https://i.giphy.com/media/${video.id}/giphy.mp4`
+  const gifUrl = `https://i.giphy.com/media/${video.id}/giphy.mp4`
     return (
       <div className="">
       
       <div className="canvas-div">
-          <div className="">
+          <div className="copies">
               <video id="sourcevid" autoPlay="true" loop="false" width="800" height="500" >
                   <source src={gifUrl} />
               </video>
