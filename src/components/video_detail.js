@@ -31,12 +31,12 @@ class VideoDetail extends React.Component {
   }
   const videoWidth = video['images']
   const videoHeight = video.images
-  const gifUrl = `https://i.giphy.com/media/${video.id}/giphy.mp4`
+  const gifUrl = `https://cors-anywhere.herokuapp.com/https://i.giphy.com/media/${video.id}/giphy.mp4`
     return (
       <div className="">
       
       <div className="canvas-div">
-          <div className="copies">
+          <div className="">
               <video id="sourcevid" autoPlay="true" loop="false" width="800" height="500" >
                   <source src={gifUrl} />
               </video>
@@ -81,7 +81,6 @@ window.rInterval=function(callback,delay){
   }
  }
 function createTiles(){
-  
     var offsetX = TILE_CENTER_WIDTH+(PAINTRECT.width-SOURCERECT.width)/2;
     var offsetY = TILE_CENTER_HEIGHT+(PAINTRECT.height-SOURCERECT.height)/2;
     var y=0;
