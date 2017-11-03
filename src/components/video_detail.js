@@ -4,7 +4,7 @@ var video
 var copy
 var copycanvas
 var draw
-var timerRef 
+var timerRef
 
 const TILE_WIDTH = 32
 const TILE_HEIGHT = 24
@@ -25,7 +25,7 @@ class VideoDetail extends React.Component {
   }
   render() {
     const video = this.props.video
-    
+
     if(!video) {
       return <div>loading...</div>
   }
@@ -34,7 +34,7 @@ class VideoDetail extends React.Component {
   const gifUrl = `https://i.giphy.com/media/${video.id}/giphy.mp4`
     return (
       <div className="">
-      
+
       <div className="canvas-div">
           <div className="copies">
               <video id="sourcevid" autoPlay="true" loop="false" width="800" height="500" >
@@ -44,7 +44,6 @@ class VideoDetail extends React.Component {
               ></canvas>
           </div>
           <div>
-              <div className="main-canvas">Click video to blow it up!</div>
               <center><canvas id="output" width="1000" height="600" onMouseDown={(event) => dropBomb(event, event.target)} className="canvas"></canvas></center>
           </div>
       </div>
@@ -81,6 +80,7 @@ window.rInterval=function(callback,delay){
   }
  }
 function createTiles(){
+
     var offsetX = TILE_CENTER_WIDTH+(PAINTRECT.width-SOURCERECT.width)/2;
     var offsetY = TILE_CENTER_HEIGHT+(PAINTRECT.height-SOURCERECT.height)/2;
     var y=0;
@@ -102,7 +102,7 @@ function createTiles(){
 }
 
 function processFrame(){
-  
+
     if(!isNaN(video.duration)){
         if(SOURCERECT.width == 0){
             SOURCERECT = {x:0,y:0,width:video.videoWidth,height:video.videoHeight};
@@ -122,7 +122,7 @@ function processFrame(){
     //copy tiles
     copy.drawImage(video, 0, 0);
     draw.clearRect(PAINTRECT.x, PAINTRECT.y,PAINTRECT.width,PAINTRECT.height);
-    
+
     for(var i=0; i<tiles.length; i++){
         var tile = tiles[i];
         if(tile.force > 0.0001){
@@ -146,7 +146,7 @@ function processFrame(){
             var diffx = (tile.originX-tile.currentX)*0.2;
             var diffy = (tile.originY-tile.currentY)*0.2;
             var diffRot = (0-tile.rotation)*0.2;
-            
+
             if(Math.abs(diffx) < 0.5){
                 tile.currentX = tile.originX;
             }else{
@@ -180,11 +180,11 @@ function processFrame(){
 function explode(x, y){
     for(var i=0; i<tiles.length; i++){
         var tile = tiles[i];
-        
+
         var xdiff = tile.currentX-x;
         var ydiff = tile.currentY-y;
         var dist = Math.sqrt(xdiff*xdiff + ydiff*ydiff);
-        
+
         var randRange = 220+(Math.random()*30);
         var range = randRange-dist;
         var force = 3*(range/randRange);
@@ -230,7 +230,7 @@ function Tile(){
     this.moveX= 0;
     this.moveY= 0;
     this.moveRotation = 0;
-    
+
     this.videoX = 0;
     this.videoY = 0;
 }
@@ -270,8 +270,7 @@ function copyPixel(sImageData, sx, sy, dImageData, dx, dy){
     dImageData.data[dpos+3] = sImageData.data[spos+3]; //A
 }
 
-  
+
 // }
 
 export default VideoDetail
-
