@@ -4,6 +4,7 @@ import ReactDOM from "react-dom"
 import SearchBar from "./components/search_bar"
 import VideoList from "./components/video_list"
 import VideoDetail from "./components/video_detail"
+import ImageButton from "./components/image_button"
 
 const API_KEY = "6vOh5xCwnuGgudvaMLAMe9pmFit8B6Jh"
 const API_LIMIT = "limit=5"
@@ -54,6 +55,9 @@ class App extends Component {
           videos={this.state.videos}
         />
         <VideoDetail key={this.state.selectedVideo.id} video={this.state['selectedVideo']} />
+
+
+        <ImageButton />
 
       </div>
     )
