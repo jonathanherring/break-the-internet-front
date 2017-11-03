@@ -4,17 +4,21 @@ import VideoListItem from './video_list_item'
 const VideoList = (props) => {
   const videoItems = props.videos.map((video) => {
     return(
-       <VideoListItem 
+       <VideoListItem
        onVideoSelect={props.onVideoSelect}
-       key={video.id} 
+       key={video.id}
        video={video} />
 
     )
   })
   return (
-    <ul className="row list-group">
-      {videoItems}
+  <div className="">
+    <ul className="flex-row list-group">
+        {videoItems}
     </ul>
+    <div className="click-text"><h3>Click video to blow it up!</h3></div>
+  </div>
+
   )
 }
 

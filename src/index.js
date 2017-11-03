@@ -54,7 +54,7 @@ class App extends Component {
           videos={this.state.videos}
         />
         <VideoDetail key={this.state.selectedVideo.id} video={this.state['selectedVideo']} />
-        
+
       </div>
     )
   }
