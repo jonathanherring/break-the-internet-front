@@ -16,7 +16,7 @@ const VideoList = (props) => {
     <ul className="flex-row list-group">
         {videoItems}
     </ul>
-    <div className="click-text"><h3>Click video to blow it up!</h3></div>
+    <div className="click-text"><h3>Click gif below, and have fun!</h3></div>
   </div>
 
   )

@@ -8,7 +8,7 @@ import ImageButton from "./components/image_button"
 
 const API_KEY = "6vOh5xCwnuGgudvaMLAMe9pmFit8B6Jh"
 const API_LIMIT = "limit=5"
-const API_URL = `http://api.giphy.com/v1/gifs/search?&api_key=${API_KEY}&${API_LIMIT}`
+const API_URL = `https://api.giphy.com/v1/gifs/search?&api_key=${API_KEY}&${API_LIMIT}`
 
 class App extends Component {
   constructor(props) {
@@ -19,7 +19,7 @@ class App extends Component {
       selectedVideo: {}
     }
 
-    this.giphySearch('babies')
+    this.giphySearch('crazy cats')
   }
   giphySearch(term){
     console.log(term)
@@ -55,10 +55,6 @@ class App extends Component {
           videos={this.state.videos}
         />
         <VideoDetail key={this.state.selectedVideo.id} video={this.state['selectedVideo']} />
-
-
-        <ImageButton />
-
       </div>
     )
   }

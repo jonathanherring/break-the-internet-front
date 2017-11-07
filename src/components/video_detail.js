@@ -43,7 +43,7 @@ class VideoDetail extends React.Component {
               <canvas id="sourcecopy" width="800" height="500"
               ></canvas>
           </div>
-          <div>
+          <div id="canvas-focus">
               <center><canvas id="output" width="1000" height="600" onMouseDown={(event) => dropBomb(event, event.target)} className="canvas"></canvas></center>
           </div>
       </div>

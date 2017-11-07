@@ -7,7 +7,9 @@
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch",
+    "build": "webpack",
+    "watch": "webpack --watch"
   },
   "author": "",
   "license": "ISC",
@@ -30,9 +32,13 @@
     "lodash": "^3.10.1",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
+    "react-modal": "^3.1.0",
     "react-redux": "4.3.0",
     "react-router": "^2.0.1",
+    "react-scripts": "^1.0.17",
+    "react-scroll-to-component": "^1.0.1",
     "redux": "^3.0.4",
+    "scroll-to-element": "^2.0.0",
     "whatwg-fetch": "^2.0.3",
     "youtube-api-search": "0.0.5"
   }

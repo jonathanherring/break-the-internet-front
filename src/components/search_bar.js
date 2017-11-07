@@ -8,16 +8,17 @@ class SearchBar extends Component {
   }
   render() {
     return (
+      <div>
       <div className="search-bar">
 
         <h3 className="search-text">Search for a gif!</h3>
-
-        Search for a gif: 
-
         <input
+        autoFocus
+        placeholder="Find your gif"
           value={this.state.term}
           onChange={event => this.onInputChange(event.target.value)}
         />
+      </div>
       </div>
     )
   }
