@@ -17,8 +17,8 @@ https://break-the-internet.firebaseapp.com/
 
 
 ## Contributors
-Miriam Quintana https://github.com/quintanamiriam
-Jonathan Herring https://github.com/jonathanherring
+* Miriam Quintana https://github.com/quintanamiriam
+* Jonathan Herring https://github.com/jonathanherring
 
 
 
