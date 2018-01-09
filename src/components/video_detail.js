@@ -108,12 +108,6 @@ function processFrame(){
             SOURCERECT = {x:0,y:0,width:video.videoWidth,height:video.videoHeight};
             createTiles();
         }
-        //this is to keep my sanity while developing
-        // if(randomJump){
-        //     randomJump = false;
-        //     video.currentTime = Math.random()*video.duration;
-        // }
-        //loop
         if(video.currentTime == video.duration){
             video.currentTime = 0;
         }
