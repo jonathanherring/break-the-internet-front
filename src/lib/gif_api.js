@@ -17,5 +17,4 @@ const search = (term) => {
     })
   }
 
-  // module.exports = {search: _.debounce(search, 300)}
 module.exports = {search}
