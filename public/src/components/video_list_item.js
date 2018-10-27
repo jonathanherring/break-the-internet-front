@@ -1,5 +1,5 @@
 import React from "react"
-import scrollToComponent from 'react-scroll-to-component';
+// import scrollToComponent from 'react-scroll-to-component'; //seems unused
 
 const VideoListItem = ({ video, onVideoSelect }) => {
   // const imageUrl = video.images.fixed_height_still.url

@@ -1,9 +1,8 @@
 import React, { Component } from "react"
 
-class SearchBar extends Component {
+export default class SearchBar extends Component {
   constructor(props) {
     super(props)
-
     this.state = { term: "" }
   }
   render() {
@@ -27,5 +26,3 @@ class SearchBar extends Component {
     this.props.onSearchTermChange(term)
   }
 }
-
-export default SearchBar
